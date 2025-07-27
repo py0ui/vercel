@@ -1,0 +1,725 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Code Pénal - Recherche</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background: #f8f9fa;
+        color: #333;
+    }
+    header {
+        background: #1e3a8a;
+        color: #fff;
+        padding: 20px;
+        text-align: center;
+        font-size: 24px;
+        font-weight: bold;
+    }
+    .search-container {
+        display: flex;
+        justify-content: center;
+        padding: 15px;
+        background: #fff;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    .search-container input {
+        width: 80%;
+        max-width: 500px;
+        padding: 12px;
+        font-size: 18px;
+        border: 1px solid #ccc;
+        border-radius: 8px;
+    }
+    .articles {
+        padding: 20px;
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+    .article {
+        background: #fff;
+        padding: 20px;
+        border-radius: 12px;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+    .article h2 {
+        margin-top: 0;
+        color: #1e3a8a;
+    }
+    mark {
+        background: yellow;
+    }
+</style>
+</head>
+<body>
+<header>📕 Code Pénal</header>
+<div class="search-container">
+    <input type="text" id="searchInput" placeholder="Rechercher un mot-clé (ex : meurtre)">
+</div>
+<div class="articles" id="articlesContainer">
+
+<!-- Début des articles -->
+<div class="article">
+<h2>Article 1 : Enlèvement</h2>
+<p>L'enlèvement est défini comme le fait de priver une personne de sa liberté en la déplaçant contre sa volonté.</p>
+<p><strong>Peine encourue :</strong><br>
+● 15 mois de réclusion criminelle<br>
+● 15 000 € d'amende</p>
+<p><strong>Circonstances aggravantes :</strong><br>
+Les peines sont portées à 30 mois de réclusion criminelle et 30 000 € d'amende si l'enlèvement est commis :<br>
+1. Sur une personne vulnérable en raison de son âge, de sa santé ou d’un handicap.<br>
+2. Avec l’usage de violence, d’intimidation ou d’une arme.<br>
+3. En bande organisée.<br>
+4. Dans le but d’obtenir une rançon ou un avantage quelconque.</p>
+</div>
+
+<div class="article">
+<h2>Article 2 : Incitation à la haine et à la violence</h2>
+<p>L'incitation à la haine et à la violence désigne le fait, par écrit, parole, discours ou tout autre moyen de communication, d'encourager autrui à commettre des actes de haine ou de violence envers une ou plusieurs personnes, en raison de critères tels que leur origine, religion, sexe, orientation sexuelle, handicap, ou toute autre caractéristique protégée.</p>
+<p><strong>Peine encourue :</strong><br>
+● 5 mois d’emprisonnement<br>
+● 10 000 € d’amende</p>
+<p><strong>Circonstances aggravantes :</strong><br>
+Les peines sont portées à 12 mois d’emprisonnement et 20 000 € d’amende si :<br>
+1. L'incitation vise des groupes particulièrement vulnérables.<br>
+2. Les propos ont été tenus dans un lieu public ou diffusés à grande échelle via des médias ou réseaux sociaux.<br>
+3. Les actes incités ont conduit à des violences effectives.<br>
+4. L'incitation est commise par une personne ayant une autorité ou une influence particulière.</p>
+</div>
+<div class="article">
+<h2>Article 3 : Séquestration</h2>
+<p>La séquestration consiste à retenir une personne contre sa volonté dans un lieu déterminé, en la privant de sa liberté de mouvement.</p>
+<p><strong>Peine encourue :</strong><br>
+● 20 mois de réclusion criminelle<br>
+● 20 000 € d’amende</p>
+<p><strong>Circonstances aggravantes :</strong><br>
+Les peines sont portées à 30 mois de réclusion criminelle et 55 000 € d’amende si la victime est une personne dépositaire de l'autorité publique.</p>
+</div>
+
+<div class="article">
+<h2>Article 4 : Prise d'otage</h2>
+<p>La prise d'otage est l’acte de détenir une personne contre sa volonté, dans le but de contraindre une tierce personne à agir ou à s’abstenir d’agir, généralement sous la menace de faire du mal à l’otage.</p>
+<p><strong>Peine encourue :</strong><br>
+● 45 mois de réclusion criminelle<br>
+● 45 000 € d’amende<br>
+● 5 000 € d’amende supplémentaire par otage</p>
+<p><strong>Circonstances aggravantes :</strong><br>
+Les peines peuvent être portées à 60 mois de réclusion criminelle et 75 000 € d’amende si :<br>
+1. L'otage est un mineur, une personne vulnérable ou un fonctionnaire.<br>
+2. La prise d'otage est accompagnée de violences physiques ou de menaces graves.<br>
+3. L'acte est commis en bande organisée ou dans le cadre d'une action terroriste.<br>
+4. L’auteur a agi avec préméditation ou pour obtenir un avantage illégal.<br>
+5. L'otage est une personne dépositaire de l’autorité publique.</p>
+</div>
+
+<div class="article">
+<h2>Article 5 : Tentative d’homicide</h2>
+<p>La tentative d’homicide consiste à tenter de tuer une personne, même si l’acte ne conduit pas à la mort de la victime.</p>
+<p><strong>Peine encourue :</strong><br>
+● 20 mois de réclusion criminelle<br>
+● 25 000 € d’amende</p>
+<p><strong>Circonstances aggravantes :</strong><br>
+Les peines peuvent être portées à 30 mois si :<br>
+1. La victime est un mineur, une personne vulnérable ou dépositaire de l’autorité publique.<br>
+2. L’acte est particulièrement cruel.<br>
+3. Commis en bande organisée ou dans le cadre d’une action terroriste.<br>
+4. L’acte est prémédité.<br>
+5. La victime est une personne dépositaire de l’autorité publique.</p>
+</div>
+
+<div class="article">
+<h2>Article 6 : Meurtre</h2>
+<p>Le meurtre est défini comme le fait de tuer une personne sans préméditation, mais avec l’intention de donner la mort.</p>
+<p><strong>Peine encourue :</strong><br>
+● 30 mois de réclusion criminelle<br>
+● 55 000 € d’amende</p>
+<p><strong>Circonstances aggravantes :</strong><br>
+Les peines peuvent être portées à 45 mois si :<br>
+1. La victime est un mineur, une personne vulnérable ou dépositaire de l’autorité publique.<br>
+2. Acte accompagné de cruauté.<br>
+3. Commis en bande organisée ou dans le cadre d’une action terroriste.<br>
+4. Pour obtenir un avantage illégal.<br>
+5. La victime est une personne dépositaire de l’autorité publique.</p>
+</div>
+
+<div class="article">
+<h2>Article 7 : Assassinat</h2>
+<p>L’assassinat est le fait de tuer une personne avec préméditation, c’est-à-dire après avoir conçu un projet délibéré de donner la mort.</p>
+<p><strong>Peine encourue :</strong><br>
+● 45 mois de réclusion criminelle<br>
+● 60 000 € d’amende</p>
+<p><strong>Circonstances aggravantes :</strong><br>
+Les peines peuvent être portées à 60 mois si :<br>
+1. Victime vulnérable ou dépositaire de l’autorité publique.<br>
+2. Acte particulièrement cruel.<br>
+3. Commis en bande organisée ou cadre terroriste.<br>
+4. Raisons criminelles (vengeance, gain).<br>
+5. Atteinte grave à l’ordre public.</p>
+</div>
+
+<div class="article">
+<h2>Article 8 : Vol à main armée</h2>
+<p>Le vol à main armée est le fait de s'emparer de biens d’autrui en utilisant une arme (à feu, blanche, ou tout autre objet menaçant), dans le but de contraindre la victime à céder ses biens sous la menace de violence immédiate.</p>
+<p><strong>Peine encourue :</strong><br>
+● 10 mois de réclusion criminelle<br>
+● 20 000 € d’amende<br>
+● Restitution des biens volés</p>
+<p><strong>Circonstances aggravantes :</strong><br>
+Les peines peuvent être portées à 15 mois et 30 000 € d’amende si :<br>
+1. Le vol est accompagné de violences ou menaces graves.<br>
+2. L'auteur possède une arme dangereuse.<br>
+3. Acte commis en bande organisée.<br>
+4. Acte commis en récidive.<br>
+5. Victime dépositaire de l’autorité publique.</p>
+</div>
+
+<div class="article">
+<h2>Article 9 : Braquage et vol en bande organisée</h2>
+<p>Le braquage en bande organisée est le fait de commettre un vol armé en s’associant avec plusieurs personnes, dans le but de s’emparer de biens d’autrui.</p>
+<p><strong>Peine encourue :</strong><br>
+● 30 mois de réclusion criminelle<br>
+● 40 000 € d’amende</p>
+<p><strong>Circonstances aggravantes :</strong><br>
+Les peines peuvent être portées à 45 mois et 60 000 € d’amende si :<br>
+1. Vol avec violences ou menaces graves.<br>
+2. Braquage violent avec blessures graves.<br>
+3. Acte lié à une action terroriste.<br>
+4. Acte commis en récidive.<br>
+5. Victime dépositaire de l’autorité publique.</p>
+</div>
+
+<div class="article">
+<h2>Article 10 : Vol de véhicule</h2>
+<p>Le vol de véhicule est le fait de s’emparer d’un véhicule appartenant à autrui par effraction, tromperie, ou tout moyen frauduleux.</p>
+<p><strong>Peine encourue :</strong><br>
+● 10 mois d’emprisonnement<br>
+● 5 000 € d’amende</p>
+<p><strong>Circonstances aggravantes :</strong><br>
+Peines portées à 15 mois et 10 000 € si :<br>
+1. Vol avec violences.<br>
+2. Véhicule utilisé pour un crime.<br>
+3. Bande organisée.<br>
+4. Acte commis en récidive.<br>
+5. Véhicule d’une autorité publique.</p>
+</div>
+
+<div class="article">
+<h2>Article 11 : Conduite d’un véhicule volé</h2>
+<p>La conduite d’un véhicule volé consiste à conduire un véhicule dont la propriété a été usurpée, sachant qu’il a été dérobé.</p>
+<p><strong>Peine encourue :</strong><br>
+● 15 mois d’emprisonnement<br>
+● 5 000 € d’amende</p>
+<p><strong>Circonstances aggravantes :</strong><br>
+Peines portées à 20 mois et 10 000 € si :<br>
+1. Conduite dangereuse ou accident grave.<br>
+2. Acte commis en récidive.<br>
+3. Véhicule utilisé pour un autre crime.<br>
+4. Véhicule appartenant à une autorité publique.</p>
+</div>
+
+<div class="article">
+<h2>Article 12 : Vol simple</h2>
+<p>Le vol simple est le fait de s’emparer d’un bien sans violence ni effraction.</p>
+<p><strong>Peine encourue :</strong><br>
+● 5 mois d’emprisonnement<br>
+● 7 500 € d’amende</p>
+<p><strong>Circonstances aggravantes :</strong><br>
+Peines portées à 10 mois et 15 000 € si :<br>
+1. Acte commis en récidive.<br>
+2. Avec complices.<br>
+3. Bien de grande valeur.<br>
+4. Bien appartenant à l’État.</p>
+</div>
+
+<div class="article">
+<h2>Article 13 : Cambriolage</h2>
+<p>Le cambriolage consiste à s’introduire illégalement dans un domicile ou lieu privé pour y commettre un vol.</p>
+<p><strong>Peine encourue :</strong><br>
+● 10 mois d’emprisonnement<br>
+● 15 000 € d’amende</p>
+<p><strong>Circonstances aggravantes :</strong><br>
+Peines portées à 15 mois et 25 000 € si :<br>
+1. Violences.<br>
+2. Habitation occupée.<br>
+3. Acte en bande organisée.<br>
+4. Acte commis en récidive.</p>
+</div>
+
+<div class="article">
+<h2>Article 14 : Braquage d’un Distributeur de Billets (DAB)</h2>
+<p>Le braquage d’un DAB consiste à forcer un distributeur pour voler de l’argent.</p>
+<p><strong>Peine encourue :</strong><br>
+● 10 mois d’emprisonnement<br>
+● 10 000 € d’amende</p>
+<p><strong>Circonstances aggravantes :</strong><br>
+Peines portées à 15 mois et 20 000 € si :<br>
+1. Violences.<br>
+2. Bande organisée.<br>
+3. Moyens dangereux (explosifs).<br>
+4. Acte en récidive.</p>
+</div>
+
+<div class="article">
+<h2>Article 15 : Braquage/Vol en bande organisée</h2>
+<p>Un acte criminel commis par un groupe ayant planifié et coordonné leurs actions pour dérober des biens.</p>
+<p><strong>Peine encourue :</strong><br>
+● 45 mois d’emprisonnement<br>
+● 75 000 € d’amende</p>
+</div>
+
+<div class="article">
+<h2>Article 16 : Violation de propriété privée</h2>
+<p>Pénétrer sur une propriété sans autorisation.</p>
+<p><strong>Peine encourue :</strong><br>
+● 2 500 € d’amende</p>
+<p><strong>Circonstances aggravantes :</strong><br>
+Peines portées à 5 000 € si :<br>
+1. Acte en récidive.<br>
+2. Lieu protégé.<br>
+3. Avec intention criminelle.</p>
+</div>
+
+<div class="article">
+<h2>Article 17 : Dégradation de biens privés</h2>
+<p>Endommager volontairement des biens appartenant à autrui.</p>
+<p><strong>Peine encourue :</strong><br>
+● 2 500 € d’amende</p>
+<p><strong>Circonstances aggravantes :</strong><br>
+Peines portées à 5 000 € si :<br>
+1. Dégâts graves.<br>
+2. Récidive.<br>
+3. Moyens dangereux.<br>
+4. Biens publics ou essentiels.</p>
+</div>
+
+<div class="article">
+<h2>Article 18 : Dégradation de biens publics</h2>
+<p>Détruire ou endommager des biens appartenant à l’État.</p>
+<p><strong>Peine encourue :</strong><br>
+● 3 000 € d’amende</p>
+<p><strong>Circonstances aggravantes :</strong><br>
+Peines portées à 5 000 € + réparation si :<br>
+1. Impact important.<br>
+2. Récidive.<br>
+3. Moyens dangereux.<br>
+4. Acte en manifestation violente.</p>
+</div>
+
+<div class="article">
+<h2>Article 19 : Menaces ou intimidations</h2>
+<p>Contraindre quelqu’un par la peur.</p>
+<p><strong>Peine encourue :</strong><br>
+● 2 000 € d’amende</p>
+<p><strong>Circonstances aggravantes :</strong><br>
+Peines portées à 5 000 € si :<br>
+1. Avec violences.<br>
+2. Récidive.<br>
+3. Préjudice grave.<br>
+4. Victime dépositaire de l’autorité publique.</p>
+</div>
+
+<div class="article">
+<h2>Article 20 : Chantage</h2>
+<p>Contraindre une personne par menace de révélation pour obtenir un avantage.</p>
+<p><strong>Peine encourue :</strong><br>
+● 10 000 € d’amende</p>
+<p><strong>Circonstances aggravantes :</strong><br>
+Peines portées à 15 000 € si :<br>
+1. Menaces graves.<br>
+2. Récidive.<br>
+3. Bande organisée.<br>
+4. Victime vulnérable.</p>
+</div>
+
+<div class="article">
+<h2>Article 21 : Mise en danger de la vie d’autrui</h2>
+<p>Créer un risque grave pour la vie ou la santé d’une personne.</p>
+<p><strong>Peine encourue :</strong><br>
+● 10 000 € d’amende</p>
+<p><strong>Circonstances aggravantes :</strong><br>
+Peines portées à 15 000 € si :<br>
+1. Conduite dangereuse.<br>
+2. Blessures graves.<br>
+3. Récidive.<br>
+4. Acte lié à un crime organisé.</p>
+</div>
+
+<div class="article">
+<h2>Article 22 : Délit de fuite</h2>
+<p>Fuir après avoir causé un accident.</p>
+<p><strong>Peine encourue :</strong><br>
+● 15 000 € d’amende</p>
+<p><strong>Circonstances aggravantes :</strong><br>
+Peines portées à 20 000 € si :<br>
+1. Conduite dangereuse.<br>
+2. Blessures graves.<br>
+3. Récidive.<br>
+4. Acte lié à un crime.</p>
+</div>
+
+<div class="article">
+<h2>Article 23 : Agression</h2>
+<p>Commettre des violences physiques sur autrui.</p>
+<p><strong>Peine encourue :</strong><br>
+● 5 mois d’emprisonnement<br>
+● 10 000 € d’amende</p>
+<p><strong>Circonstances aggravantes :</strong><br>
+Peines portées à 10 mois et 15 000 € si :<br>
+1. Récidive.<br>
+2. Blessures graves.<br>
+3. Violence conjugale.<br>
+4. Discrimination.<br>
+5. Victime dépositaire de l’autorité publique.</p>
+</div>
+
+<div class="article">
+<h2>Article 24 : Entrave à une intervention médicale</h2>
+<p>Empêcher l’action des secours ou médecins.</p>
+<p><strong>Peine encourue :</strong><br>
+● 10 000 € d’amende</p>
+<p><strong>Circonstances aggravantes :</strong><br>
+Peines portées à 15 000 € si :<br>
+1. Met en danger la vie.<br>
+2. Récidive.<br>
+3. Sous influence d’alcool.<br>
+4. Manifestation violente.</p>
+</div>
+
+<div class="article">
+<h2>Article 25 : Entrave à une intervention des forces de l’ordres</h2>
+<p>Empêcher l’action des forces de l’ordre.</p>
+<p><strong>Peine encourue :</strong><br>
+● 10 000 € d’amende</p>
+<p><strong>Circonstances aggravantes :</strong><br>
+Peines portées à 15 000 € si :<br>
+1. Met en danger l’ordre public.<br>
+2. Récidive.<br>
+3. Sous influence.<br>
+4. Manifestation violente.</p>
+</div>
+
+<div class="article">
+<h2>Article 26 : Violation du secret professionnel</h2>
+<p>Divulguer des informations confidentielles.</p>
+<p><strong>Peine encourue :</strong><br>
+● 5 000 € d’amende</p>
+<p><strong>Circonstances aggravantes :</strong><br>
+Peines portées à 10 000 € si :<br>
+1. Préjudice grave.<br>
+2. Récidive.<br>
+3. Intention de nuire.<br>
+4. Informations sensibles.</p>
+</div>
+
+<div class="article">
+<h2>Article 27 : Terrorisme</h2>
+<p>Commettre, promouvoir ou se rendre complice d’actes terroristes.</p>
+<p><strong>Peine encourue :</strong><br>
+● 45 mois de réclusion criminelle<br>
+● 100 000 € d’amende</p>
+<p><strong>Circonstances aggravantes :</strong><br>
+Peines portées à 60 mois et 150 000 € si :<br>
+1. Actes accompagnés de meurtres ou attentats.<br>
+2. Acte commis en bande organisée.<br>
+3. Acte motivé par idéologie.<br>
+4. Auteur membre d’une organisation terroriste.</p>
+</div>
+
+<div class="article">
+<h2>Article 28 : Menaces ou intimidations sur une personne dépositaire de l’autorité publique</h2>
+<p>Menaces ou intimidations visant un agent de l’autorité publique dans l’exercice de ses fonctions.</p>
+<p><strong>Peine encourue :</strong><br>
+● 5 mois d’emprisonnement<br>
+● 5 000 € d’amende</p>
+<p><strong>Circonstances aggravantes :</strong><br>
+Peines portées à 10 mois et 10 000 € si :<br>
+1. Avec violences graves.<br>
+2. Perturbation grave d’une fonction publique essentielle.<br>
+3. Récidive.<br>
+4. Menaces par réseaux sociaux ou masse.</p>
+</div>
+
+<div class="article">
+<h2>Article 29 : Outrage à agent dépositaire de l’autorité publique</h2>
+<p>Propos, gestes ou comportements offensants envers un agent de l’État.</p>
+<p><strong>Peine encourue :</strong><br>
+● 9 000 € d’amende</p>
+<p><strong>Circonstances aggravantes :</strong><br>
+Peines portées à 12 000 € si :<br>
+1. Accompagné de menaces.<br>
+2. Commis en public.<br>
+3. Récidive.<br>
+4. Agent en mission sensible.</p>
+</div>
+
+<div class="article">
+<h2>Article 30 : Trouble à l’ordre public</h2>
+<p>Provoquer des perturbations dans un espace public.</p>
+<p><strong>Peine encourue :</strong><br>
+● 5 000 € d’amende</p>
+<p><strong>Circonstances aggravantes :</strong><br>
+Peines portées à 10 000 € si :<br>
+1. Acte commis en bande.<br>
+2. Avec violences.<br>
+3. Perturbation grave (circulation, services publics).<br>
+4. Récidive.<br>
+5. Actes visant à semer la panique.</p>
+</div>
+
+<div class="article">
+<h2>Article 31 : Participation à une manifestation illégale</h2>
+<p>Prendre part à un rassemblement non autorisé.</p>
+<p><strong>Peine encourue :</strong><br>
+● 10 mois de réclusion criminelle<br>
+● 5 000 € d’amende</p>
+<p><strong>Circonstances aggravantes :</strong><br>
+Peines portées à 15 mois et 10 000 € si :<br>
+1. Manifestation dégénère en violences.<br>
+2. Organisée par un groupe criminel.<br>
+3. Port d’armes.<br>
+4. Récidive.<br>
+5. Perturbation grave des institutions.</p>
+</div>
+
+<div class="article">
+<h2>Article 32 : Entrave à l’exercice de la justice</h2>
+<p>Empêcher l’application de la loi (influencer des témoins, dissimuler des preuves).</p>
+<p><strong>Peine encourue :</strong><br>
+● 5 mois de réclusion criminelle<br>
+● 5 000 € d’amende</p>
+<p><strong>Circonstances aggravantes :</strong><br>
+Peines portées à 10 mois et 10 000 € si :<br>
+1. Conséquences graves (procès retardé, criminel libéré).<br>
+2. Commis en bande.<br>
+3. Auteur professionnel de justice.<br>
+4. Lié à corruption ou menaces.<br>
+5. Acte organisé pour faire échouer un procès.</p>
+</div>
+
+<div class="article">
+<h2>Article 33 : Refus d’obtempérer</h2>
+<p>Ne pas se conformer aux ordres d’un agent public.</p>
+<p><strong>Peine encourue :</strong><br>
+● 5 mois d’emprisonnement<br>
+● 15 000 € d’amende</p>
+<p><strong>Circonstances aggravantes :</strong><br>
+Peines portées à 10 mois et 20 000 € si :<br>
+1. Avec violences.<br>
+2. Récidive.<br>
+3. Conséquences graves (accident).<br>
+4. Utilisation d’un véhicule pour fuir.<br>
+5. En contexte de manifestation.</p>
+</div>
+
+<div class="article">
+<h2>Article 34 : Non-présentation à une convocation</h2>
+<p>Ne pas se présenter à une convocation judiciaire ou policière sans motif légitime.</p>
+<p><strong>Peine encourue :</strong><br>
+● 5 mois d’emprisonnement<br>
+● 15 000 € d’amende</p>
+<p><strong>Circonstances aggravantes :</strong><br>
+Peines portées à 10 mois et 20 000 € si :<br>
+1. Retard ou obstacle majeur dans une procédure.<br>
+2. Récidive.<br>
+3. Accompagné d’autres infractions.<br>
+4. Acte intentionnel pour échapper à la justice.<br>
+5. Personne sous contrôle judiciaire.</p>
+</div>
+
+<div class="article">
+<h2>Article 35 : Faux appel aux services de secours</h2>
+<p>Contacter les services d’urgence sans raison valable.</p>
+<p><strong>Peine encourue :</strong><br>
+● 10 000 € d’amende</p>
+<p><strong>Circonstances aggravantes :</strong><br>
+Peines portées à 15 000 € si :<br>
+1. Mobilisation excessive des secours.<br>
+2. Acte en période de crise.<br>
+3. Répétition ou intention de nuire.<br>
+4. Escroquerie ou diversion criminelle.<br>
+5. Auteur mineur sous influence.</p>
+</div>
+
+<div class="article">
+<h2>Article 36 : Blanchiment d’argent</h2>
+<p>Dissimuler l'origine illicite de fonds pour les rendre légitimes.</p>
+<p><strong>Peine encourue :</strong><br>
+● 15 mois de réclusion criminelle<br>
+● 25 000 € d’amende</p>
+<p><strong>Circonstances aggravantes :</strong><br>
+Peines portées à 30 mois et 50 000 € si :<br>
+1. Acte en bande organisée.<br>
+2. Fonds issus d’activités graves (drogue, terrorisme).<br>
+3. Financement d’activités criminelles.<br>
+4. Transactions complexes et internationales.<br>
+5. Auteur professionnel du secteur financier.</p>
+</div>
+
+<div class="article">
+<h2>Article 37 : Divulgation d'informations confidentielles</h2>
+<p>Diffuser des informations protégées par la loi ou la confidentialité.</p>
+<p><strong>Peine encourue :</strong><br>
+● 10 mois de réclusion criminelle<br>
+● 10 000 € d’amende</p>
+<p><strong>Circonstances aggravantes :</strong><br>
+Peines portées à 20 mois et 20 000 € si :<br>
+1. Informations sensibles (sécurité nationale).<br>
+2. But malveillant.<br>
+3. Préjudice grave.<br>
+4. Auteur professionnel soumis au secret.<br>
+5. Diffusion contre rémunération.</p>
+</div>
+
+<div class="article">
+<h2>Article 38 : Usurpation d'identité</h2>
+<p>Utiliser les informations personnelles d’autrui sans consentement.</p>
+<p><strong>Peine encourue :</strong><br>
+● 15 mois de réclusion criminelle<br>
+● 10 000 € d’amende</p>
+<p><strong>Circonstances aggravantes :</strong><br>
+Peines portées à 30 mois et 20 000 € si :<br>
+1. Acte frauduleux.<br>
+2. Victime vulnérable.<br>
+3. Acte en bande organisée.<br>
+4. Préméditation.<br>
+5. Préjudice grave.</p>
+</div>
+
+<div class="article">
+<h2>Article 39 : Usage de faux</h2>
+<p>Utiliser ou faire circuler des documents falsifiés.</p>
+<p><strong>Peine encourue :</strong><br>
+● 15 mois de réclusion criminelle</p>
+<p><strong>Circonstances aggravantes :</strong><br>
+Peines portées à 30 mois si :<br>
+1. Pour commettre une fraude complexe.<br>
+2. Documents officiels falsifiés.<br>
+3. Acte en bande organisée.<br>
+4. Préjudice grave.<br>
+5. Acte prémédité.</p>
+</div>
+
+<div class="article">
+<h2>Article 40 : Organisation de jeux illégaux</h2>
+<p>Organiser des jeux d’argent ou paris sans autorisation.</p>
+<p><strong>Peine encourue :</strong><br>
+● 10 mois d’emprisonnement<br>
+● 20 000 € d’amende</p>
+<p><strong>Circonstances aggravantes :</strong><br>
+Peines portées à 20 mois et 40 000 € si :<br>
+1. Implication de mineurs.<br>
+2. Lié à crime organisé.<br>
+3. Blanchiment d’argent.<br>
+4. Risques graves pour les participants.<br>
+5. Profits importants.</p>
+</div>
+
+<div class="article">
+<h2>Article 41 : Produits illicites</h2>
+<p>Possession, production ou vente de drogues illicites.</p>
+<p><strong>Peine encourue :</strong><br>
+● 15 mois d’emprisonnement<br>
+● 25 000 € d’amende</p>
+<p><strong>Circonstances aggravantes :</strong><br>
+Peines portées à 30 mois et 50 000 € si :<br>
+1. Trafic organisé.<br>
+2. Drogues particulièrement dangereuses.<br>
+3. Auteur en position d’autorité.<br>
+4. Réseaux organisés.<br>
+5. Redistribution dans des lieux publics.</p>
+</div>
+
+<div class="article">
+<h2>Article 42 : Dissimulation de visage sur la voie publique</h2>
+<p>Couvrir son visage pour empêcher son identification.</p>
+<p><strong>Peine encourue :</strong><br>
+● 5 mois de réclusion criminelle<br>
+● 5 000 € d’amende</p>
+<p><strong>Circonstances aggravantes :</strong><br>
+Peines portées à 10 mois et 10 000 € si :<br>
+1. Acte dans une activité criminelle.<br>
+2. Lié à terrorisme.<br>
+3. Pour échapper à la police.<br>
+4. En groupe organisé.</p>
+</div>
+
+<div class="article">
+<h2>Article 43 : Relatif à la récidive</h2>
+<p>En cas de récidive :<br>
+1. Amende augmentée.<br>
+2. Non-cumul des peines (on applique la plus grave).<br>
++ Supplément de 2 500 € sur la peine la plus élevée.</p>
+</div>
+
+<div class="article">
+<h2>Article 44 : Port d'armes</h2>
+<p>Possession d’armes sans autorisation.</p>
+<p><strong>Peines encourues :</strong><br>
+Catégorie A : 99 000 € et 30 mois (chez soi), 125 000 € et 45 mois (en public).<br>
+Catégorie B : 40 000 € et 10 mois (chez soi), 45 000 € et 20 mois (en public).<br>
+Catégorie C : 20 000 € et 10 mois.<br>
+Catégorie D : 5 000 €.</p>
+<p><strong>Circonstances aggravantes :</strong><br>
+Peines aggravées si :<br>
+1. Arme utilisée pour un crime.<br>
+2. Récidive.<br>
+3. Acte terroriste.<br>
+4. Menace d’autorités.</p>
+</div>
+
+<div class="article">
+<h2>Article 45 : Vente d’armes</h2>
+<p>Vente d’armes sans autorisation.</p>
+<p><strong>Peines encourues :</strong><br>
+● 30 000 € et 20 mois pour armes A et B.<br>
+Catégorie C et D : 10 000 € et 10 mois.</p>
+<p><strong>Circonstances aggravantes :</strong><br>
+Peines aggravées si :<br>
+1. Vente à mineurs.<br>
+2. But criminel.<br>
+3. Récidive.<br>
+4. Trafic organisé.</p>
+</div>
+
+<div class="article">
+<h2>Article 46 : Complicité</h2>
+<p>Est complice celui qui aide ou provoque une infraction. Il sera puni comme l’auteur.</p>
+</div>
+
+<div class="article">
+<h2>Article 47 : Non cumul des peines</h2>
+<p>En cas de condamnation pour plusieurs infractions, on applique la peine la plus grave.</p>
+</div>
+
+
+
+</div>
+
+<script>
+const searchInput = document.getElementById('searchInput');
+searchInput.addEventListener('input', function() {
+    const searchTerm = this.value.toLowerCase();
+    const articles = document.querySelectorAll('.article');
+    articles.forEach(article => {
+        const text = article.textContent.toLowerCase();
+        if (text.includes(searchTerm)) {
+            article.style.display = 'block';
+            // Remove old highlights
+            article.innerHTML = article.innerHTML.replace(/<mark>|<\/mark>/g, '');
+            if (searchTerm.length > 0) {
+                const regex = new RegExp('('+searchTerm+')', 'gi');
+                article.innerHTML = article.innerHTML.replace(regex, '<mark>$1</mark>');
+            }
+        } else {
+            article.style.display = 'none';
+        }
+    });
+});
+</script>
+</body>
+</html>
